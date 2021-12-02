@@ -7,8 +7,10 @@ def part1(input):
         previous_number = number
     return increased_count
 
+
 def part1_alt(input):
     return sum(a < b for a, b in zip(input, input[1:]))
+
 
 def part2(input):
     input_sum = []
@@ -16,8 +18,10 @@ def part2(input):
         input_sum.append(sum(input[i:i+3]))
     return part1(input_sum)
 
+
 def part2_alt(input):
     return sum(a < b for a, b in zip(input, input[3:]))
+
 
 # MAIN
 input = [int(number) for number in open("input.txt", "r").readlines()]
