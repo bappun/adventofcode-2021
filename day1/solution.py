@@ -24,6 +24,8 @@ def part2_alt(input):
 
 
 # MAIN
-input = [int(number) for number in open("input.txt", "r").readlines()]
+with open("input.txt", "r") as f:
+    input = [int(number) for number in f.readlines()]
+
 print(part1(input))
 print(part2(input))
